@@ -4,8 +4,8 @@
 #include "main.h"
 
 void main() {
-	int length = 1;
-	int width = 1;
+	int length = 8;
+	int width = 5;
 	bool continueProgram = true;
 	while (continueProgram) {
 		printWelcomeMenu();
@@ -71,19 +71,19 @@ int getIntInput(char message[]) {
 }
 
 void setLength(int input, int *length) {
-	if (input >= 0 && input < 100) {
+	if (input > 0 && input < 100) {
 		*length = input;
 	}
 }
 
 void setWidth(int input, int *width) {
-	if (input > 0 && input <= 100) {
+	if (input > 0 && input < 100) {
 		*width = input;
 	}
 }
 
 int getPerimeter(int *length, int *width) {
-	int perimeter = *length + *length + *width;
+	int perimeter = 2 * (*length + *width);
 	return perimeter;
 }
 
